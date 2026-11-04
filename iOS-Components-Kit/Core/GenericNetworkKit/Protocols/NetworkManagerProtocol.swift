@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import Combine
 
 protocol NetworkManagerProtocol {
-    func request<T: Decodable>(endPoint: EndPoint) async throws -> T
+    func asyncRequest<T: Decodable>(endPoint: EndPoint) async throws -> T
+    func requestPublisher<T: Decodable>(endpoint: EndPoint) -> AnyPublisher<T, NetworkError>
 }

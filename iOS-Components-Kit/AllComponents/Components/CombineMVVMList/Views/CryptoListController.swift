@@ -23,7 +23,6 @@ class CryptoListController: UIViewController, UITableViewDelegate, UITableViewDa
     
     private func setupDetails() {
         
-        navigationController?.isNavigationBarHidden = true
         self.view.backgroundColor = .black
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,7 +31,7 @@ class CryptoListController: UIViewController, UITableViewDelegate, UITableViewDa
         
         NSLayoutConstraint.activate([
             
-            marketLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64),
+            marketLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64 + 44),
             marketLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             
             tableView.topAnchor.constraint(equalTo: marketLabel.bottomAnchor, constant: 20),

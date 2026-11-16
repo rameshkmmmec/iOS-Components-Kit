@@ -21,23 +21,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 2. Initialize UIWindow with the scene
         let window = UIWindow(windowScene: windowScene)
         
-        // 3. Root ViewController aur UINavigationController setup
-        let rootVC = CryptoListController()
+//        // 3. Root ViewController aur UINavigationController setup
+//        let rootVC = CryptoListController()
+//        let navController = UINavigationController(rootViewController: rootVC)
+//        
+//        // Dark theme & navigation bar styling (Industry Standard)
+//        navController.navigationBar.prefersLargeTitles = true
+//        
+//        let appearance = UINavigationBarAppearance()
+//        appearance.configureWithDefaultBackground()
+//        appearance.backgroundColor = .systemBackground
+//        
+//        navController.navigationBar.standardAppearance = appearance
+//        navController.navigationBar.scrollEdgeAppearance = appearance
+//        navController.navigationBar.compactAppearance = appearance
+//        
+//        // 4. Set root view controller and make visible
+//        window.rootViewController = navController
+        
+        let rootVC = ComponentRouter.destination()
         let navController = UINavigationController(rootViewController: rootVC)
-        
-        // Dark theme & navigation bar styling (Industry Standard)
-        navController.navigationBar.prefersLargeTitles = true
-        
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithDefaultBackground()
-        appearance.backgroundColor = .systemBackground
-        
-        navController.navigationBar.standardAppearance = appearance
-        navController.navigationBar.scrollEdgeAppearance = appearance
-        navController.navigationBar.compactAppearance = appearance
-        
-        // 4. Set root view controller and make visible
         window.rootViewController = navController
+        
         self.window = window
         window.makeKeyAndVisible()
     }

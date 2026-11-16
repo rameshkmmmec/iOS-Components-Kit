@@ -190,7 +190,8 @@ final class CryptoCoinCell: UITableViewCell {
         let primaryColor: UIColor = isPositive ? UIColor(red: 109/255, green: 185/255, blue: 115/255, alpha: 1) : .systemRed
         precentageView.backgroundColor = primaryColor.withAlphaComponent(1.0)
         
-        iconImageView.setImage(from: coin.image, placeholder: UIImage(named: "coinPlaceholder"))
+        //iconImageView.setImage(from: coin.image, placeholder: UIImage(named: "coinPlaceholder"))
+        iconImageView.setImag(from: coin.image, placeholder: UIImage(systemName: "bitcoinsign.circle.fill"))
         
         let itemCount = itemList.count
         let cornerRedius: CGFloat = 16
@@ -209,6 +210,7 @@ final class CryptoCoinCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        iconImageView.cancelImagLoad()
         iconImageView.image = nil
     }
 }

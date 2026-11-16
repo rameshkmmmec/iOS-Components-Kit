@@ -33,6 +33,9 @@ enum ComponentRouter {
         case "ActorImageCache":
             return ActorImageCacheViewController()
             
+        case "ModernCompositionalGrid":
+            return CompositionalGridViewController()
+            
         default:
             return AllComponentsViewController()
         }

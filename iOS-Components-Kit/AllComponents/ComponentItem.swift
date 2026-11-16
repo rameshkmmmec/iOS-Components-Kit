@@ -19,8 +19,26 @@ struct ComponentItem: Hashable {
     
     static let allItems: [ComponentItem] = [
         
-        ComponentItem(routeKey: "CombineMVVMNetworking", title: "Combine+MVVM+Networking", subtitle: "CoinGecko API list with generic Combine/async network wrapper", techStack: ["UIKit", "Combine", "MVVM", "Async/Publisher"], iconName: "list.bullet.rectangle.portrait.fill", accentColor: .systemIndigo),
+        ComponentItem(routeKey: "CombineMVVMNetworking",
+                      title: "Combine+MVVM+Networking",
+                      subtitle: "CoinGecko API list with generic Combine/async network wrapper",
+                      techStack: ["UIKit", "Combine", "MVVM", "Async/Publisher"],
+                      iconName: "list.bullet.rectangle.portrait.fill",
+                      accentColor: .systemIndigo),
         
-        ComponentItem(routeKey: "ActorImageCache", title: "Actor Image Cache", subtitle: "Thread-safe memory & disk caching with in-flight request deduplication", techStack: ["Swift Concurrency", "Actor", "NSCache", "CryptoKit"], iconName: "photo.stack.fill", accentColor: .systemTeal)
+        ComponentItem(routeKey: "ActorImageCache",
+                      title: "Actor Image Cache",
+                      subtitle: "Thread-safe memory & disk caching with in-flight request deduplication",
+                      techStack: ["Swift Concurrency", "Actor", "NSCache", "CryptoKit"],
+                      iconName: "photo.stack.fill",
+                      accentColor: .systemTeal),
+        
+        ComponentItem(
+            routeKey: "ModernCompositionalGrid",
+            title: "Compositional Layout & Diffable Grid",
+            subtitle: "Multi-section orthogonal carousel, filter chips & animated DiffableDataSource",
+            techStack: ["CompositionalLayout", "DiffableDataSource", "CellRegistration"],
+            iconName: "square.grid.3x3.topleft.filled",
+            accentColor: .systemPurple)
     ]
 }
